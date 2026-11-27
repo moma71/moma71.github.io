@@ -18,6 +18,15 @@
     if(el.type==='checkbox'){el.checked=v==='1';el.addEventListener('change',function(){store.set(k,el.checked?'1':'')})}
     else{if(v)el.value=v;el.addEventListener('input',function(){store.set(k,el.value)})}
   });
+  document.querySelectorAll('.other').forEach(function(sec){
+    var bs=sec.querySelectorAll('.ftab');
+    bs.forEach(function(b){b.addEventListener('click',function(){
+      bs.forEach(function(x){x.classList.remove('on');var p=document.getElementById(x.getAttribute('data-t'));if(p)p.hidden=true});
+      b.classList.add('on');var p=document.getElementById(b.getAttribute('data-t'));if(p)p.hidden=false;store.set('field',b.textContent.replace('책',''));
+    })});
+    var pref=store.get('field');
+    if(pref){bs.forEach(function(b){if(b.textContent.replace('책','')===pref)b.click()})}
+  });
   var q=document.getElementById('q');
   if(q){q.addEventListener('input',function(){var s=q.value.trim().toLowerCase();document.querySelectorAll('table.map tbody tr').forEach(function(tr){tr.style.display=!s||tr.textContent.toLowerCase().indexOf(s)>=0?'':'none'})})}
 })();

@@ -62,3 +62,10 @@ footer{max-width:40rem;margin:0 auto;padding:1.4em 1.1em 3em;font-family:Pre,san
 .toast{position:fixed;left:50%;bottom:1.5em;transform:translateX(-50%);background:var(--ink);color:#fff;font-family:Pre,sans-serif;font-size:.85rem;padding:.5em 1.1em;border-radius:2em;opacity:0;transition:opacity .2s}
 .toast.on{opacity:1}
 @media (max-width:480px){html{font-size:16px}h1{font-size:1.75rem}.top nav a{margin-left:.7em}}
+.ftabs{display:flex;flex-wrap:wrap;gap:.35em;margin:.4em 0 .2em}
+.ftab{background:#fff;color:var(--blue);border:1px solid #C9D3E0;font-size:.8rem;padding:.3em .8em}
+.ftab.on{background:var(--blue);color:#fff;border-color:var(--blue)}
+.ftab small{font-size:.65rem;margin-left:.35em;opacity:.8}
+.fpanel{border-top:1px solid var(--line);margin-top:.6em}
+.fname{font-family:Pre,sans-serif;font-size:.78rem;font-weight:700;color:var(--mute);margin:.9em 0 .2em}
+.jump{font-family:Pre,sans-serif;font-size:.85rem;line-height:2}
